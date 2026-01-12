@@ -1006,6 +1006,20 @@
         - Global CSS
         - CSS Modules
         - Tailwind CSS  
+    10. API Routes : build backend APIs inside a Next.js project using JavaScript/TypeScript
+        - File Structure
+            app/
+            └── api/
+                └── users/
+                    └── route.ts
+        - Methods supported
+            export async function GET() {}
+            export async function POST(request: Request) {}
+            export async function PUT(request: Request) {}
+            export async function DELETE() {}
+        - Dynamic API Route : app/api/users/[id]/route.ts
+
+
 
             
 
