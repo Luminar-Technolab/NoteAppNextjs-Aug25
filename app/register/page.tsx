@@ -4,7 +4,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Register(){
-const router = useRouter()
+  
+  const router = useRouter()
   const [name,setname] = useState("")
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
@@ -23,15 +24,15 @@ const router = useRouter()
       })
       if(res.status==201){
         alert("User added successfully")
-        setname("")
-        setEmail("")
-        setPassword("")
         router.push('/')
       }else if(res.status==409){
         const data = await res.json()
-       alert(data.message);
+        alert(data.message);
         router.push('/')
       }
+      setname("")
+      setEmail("")
+      setPassword("")
       }
   }
      return (

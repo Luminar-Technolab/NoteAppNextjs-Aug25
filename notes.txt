@@ -1001,6 +1001,7 @@
                 - Not Found (404) : ex: app/not-found.tsx, Automatically shown for invalid routes.
                 - To get dynamic variable from a url in component use params props, params return promise 
                 - Loading : create loading.tsx in each async function folder
+                - useRouter hook : used to navigate from one page to another in compoenent, it has to import from 'next/navigation' if its a client compoenent, else 'next/router' if its a server compoenent
             2. Pages Router
     9. Styling : 
         - Global CSS
@@ -1018,6 +1019,16 @@
             export async function PUT(request: Request) {}
             export async function DELETE() {}
         - Dynamic API Route : app/api/users/[id]/route.ts
+    11. NextAuth : is an authentication library for Next.js that makes login, logout, and session management easy.
+        - How NextAuth Works (Flow)
+            1. User clicks Login
+            2. User selects provider (Google / Credentials)
+            3. Provider authenticates the user
+            4. NextAuth creates a session / JWT
+            5. Session is stored (cookie / token)
+            6. User stays logged in across pages
+        - Installation : npm install next-auth
+        - 
 
 
 
