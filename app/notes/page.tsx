@@ -86,10 +86,10 @@ export default function Notes(props:any){
 
   return (
     <main className="min-h-screen bg-gray-100 p-10">
-      <div className="flex justify-between items-center m-5">
-              <h1 className="text-3xl text-blue-500">Welcome {loginUser.user?.name}</h1>
-              <button onClick={()=>signOut({callbackUrl:'/'})} className="bg-amber-500 text-white px-4 py-2 rounded">Logout</button>
-            </div>
+      <div className="flex justify-between items-center ">
+        <h1 className="text-3xl text-blue-500">Welcome {loginUser?.user?.name}</h1>
+        <button onClick={()=>signOut({callbackUrl:'/'})} className="bg-amber-500 text-white px-4 py-2 rounded">Logout</button>
+      </div>
       <div className="max-w-xl mx-auto bg-white p-6 rounded shadow">
         <h1 className="text-2xl text-blue-600 font-bold mb-4 text-center">Note Manager</h1>
         <input value={title} onChange={e=>setTitle(e.target.value)} className="border p-2 w-full border-gray-200 mb-2 " placeholder="Title" type="text" />
